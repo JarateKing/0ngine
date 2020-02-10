@@ -1,5 +1,5 @@
-#include <iostream>
+#include "console/log.h"
 
 int main() {
-	std::cout << "Hello World!\n";
+	ConsoleLog("Welcome to 0ngine!");
 }
