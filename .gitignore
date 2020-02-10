@@ -2,3 +2,6 @@
 src/wasm/*.html
 src/wasm/*.js
 src/wasm/*.wasm
+
+# builds
+build/*
