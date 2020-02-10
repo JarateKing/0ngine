@@ -1,10 +1,11 @@
 mergeInto(LibraryManager.library, {
 	changeIcon: function(iconSrc) {
-		var newlink = document.createElement('link');
-		var oldlink = document.querySelector('#dynamic-favicon');
+		let iconSrcStr = UTF8ToString(iconSrc);
+		let newlink = document.createElement('link');
+		let oldlink = document.querySelector('#dynamic-favicon');
 		newlink.id = 'dynamic-favicon';
 		newlink.rel = 'shortcut icon';
-		newlink.href = iconSrc;
+		newlink.href = iconSrcStr; 
 		if (oldlink) {
 				document.head.removeChild(oldlink);
 		}
@@ -12,10 +13,13 @@ mergeInto(LibraryManager.library, {
 	},
 
 	changeUrl: function(state, urlSuffix) {
-		window.history.replaceState(state, state, "#" + urlSuffix);
+		let stateStr = UTF8ToString(state);
+		let suffixStr = UTF8ToString(urlSuffix);
+		window.history.replaceState(stateStr, stateStr, "#" + suffixStr);
 	},
 
 	changeTitle: function(title) {
-		document.title = title;
+		let titleStr = UTF8ToString(title);
+		document.title = titleStr;
 	},
 });
