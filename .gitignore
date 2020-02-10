@@ -1,0 +1,4 @@
+# wasm compiles
+src/wasm/*.html
+src/wasm/*.js
+src/wasm/*.wasm
