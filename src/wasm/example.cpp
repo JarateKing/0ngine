@@ -6,4 +6,6 @@ int main() {
 	js::changeTitle(title.c_str());
 	
 	ConsoleLog("Welcome to 0ngine!");
+	
+	js::openUrl("https://google.com");
 }

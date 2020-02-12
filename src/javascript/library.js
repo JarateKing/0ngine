@@ -22,4 +22,9 @@ mergeInto(LibraryManager.library, {
 		let titleStr = UTF8ToString(title);
 		document.title = titleStr;
 	},
+	
+	openUrl: function(url) {
+		let urlStr = UTF8ToString(url);
+		window.open(urlStr);
+	}
 });
