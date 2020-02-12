@@ -25,6 +25,6 @@ mergeInto(LibraryManager.library, {
 	
 	openUrl: function(url) {
 		let urlStr = UTF8ToString(url);
-		window.open(urlStr);
+		window.open(urlStr, '_blank');
 	}
 });
