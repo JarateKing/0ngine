@@ -1,3 +1,6 @@
 #include <string>
 
-void ConsoleLog(std::string line);
+namespace engine
+{
+	void ConsoleLog(std::string line);
+}

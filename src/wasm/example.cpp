@@ -8,5 +8,5 @@ int main() {
 	std::string icon = "resource/icons/0ngine.ico";
 	js::changeIcon(icon.c_str());
 	
-	ConsoleLog("Welcome to 0ngine!");
+	engine::ConsoleLog("Welcome to 0ngine!");
 }
