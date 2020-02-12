@@ -5,10 +5,11 @@ mergeInto(LibraryManager.library, {
 		let oldlink = document.querySelector('#dynamic-favicon');
 		newlink.id = 'dynamic-favicon';
 		newlink.rel = 'shortcut icon';
-		newlink.href = iconSrcStr; 
-		if (oldlink) {
-				document.head.removeChild(oldlink);
-		}
+		newlink.href = iconSrcStr;
+		
+		if (oldlink)
+			document.head.removeChild(oldlink);
+		
 		document.head.appendChild(newlink);
 	},
 
@@ -23,8 +24,12 @@ mergeInto(LibraryManager.library, {
 		document.title = titleStr;
 	},
 	
-	openUrl: function(url) {
+	openUrl: function(url, isNewTab) {
 		let urlStr = UTF8ToString(url);
-		window.open(urlStr, '_blank');
+		
+		if (isNewTab)
+			window.open(urlStr, '_blank');
+		else
+			window.location.href = urlStr;
 	}
 });
