@@ -31,5 +31,17 @@ mergeInto(LibraryManager.library, {
 			window.open(urlStr, '_blank');
 		else
 			window.location.href = urlStr;
+	},
+	
+	displayCopywrite: function() {
+		let canvas = document.getElementById("canvas");
+		let context = canvas.getContext("2d");
+		
+		canvas.width = canvas.offsetWidth;
+		canvas.height = canvas.offsetHeight;
+		
+		context.fillStyle = 'grey';
+		context.font = "12px Arial";
+		context.fillText("Made with 0ngine", 5, 17);
 	}
 });

@@ -8,5 +8,7 @@ int main() {
 	std::string icon = "resource/icons/0ngine.ico";
 	js::changeIcon(icon.c_str());
 	
+	js::displayCopywrite();
+	
 	engine::ConsoleLog("Welcome to 0ngine!");
 }
