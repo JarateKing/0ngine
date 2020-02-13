@@ -5,5 +5,6 @@ namespace js {
 		extern void changeTitle(const char* title);
 		extern void openUrl(const char* url, bool isNewTab);
 		extern void displayCopywrite();
+		extern void clearDisplay();
 	}
 }
