@@ -6,4 +6,4 @@ copy src\css\canvas.css build\canvas.css
 mkdir build\resource
 xcopy /E resource build\resource
 
-em++ -O2 src/wasm/example.cpp src/wasm/console/log.cpp src/wasm/math/lerp.cpp --js-library src/javascript/library.js --shell-file src/html/template.html -o build/main.html -s WASM=1
+em++ -O2 src/wasm/example.cpp src/wasm/console/log.cpp src/wasm/math/lerp.cpp src/wasm/math/rng.cpp --js-library src/javascript/library.js --shell-file src/html/template.html -o build/main.html -s WASM=1
