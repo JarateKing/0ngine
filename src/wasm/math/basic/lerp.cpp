@@ -1,5 +1,4 @@
-#include "lerp.h"
-#include <cmath>
+#include "../basic.h"
 
 namespace engine
 {
