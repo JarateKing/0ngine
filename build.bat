@@ -1,14 +1,16 @@
+:: BUILD SCRIPT
+:: run from commandline to build
+:: builds are output to the `build` folder
+
 setlocal ENABLEDELAYEDEXPANSION
 
 :: delete previous build
 rmdir /s /q build
-
-:: copy css to build folder
 mkdir build
-copy src\css\canvas.css build\canvas.css
+mkdir build\resource
 
 :: copy resources to build folder
-mkdir build\resource
+xcopy /E src\css\*.css build
 xcopy /E resource build\resource
 
 :: find all cpp files
