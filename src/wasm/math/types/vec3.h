@@ -1,8 +1,10 @@
+#import "../types.h"
+
 namespace engine
 {
 	struct vec3 {
 		double x, y, z;
-		vec3(x, y, z) : x(x), y(y), z(z);
+		vec3(double x, double y, double z) : x(x), y(y), z(z) {}
 		
 		vec3 operator+(vec3 a) const {
 			return vec3(x + a.x, y + a.y, z + a.z);
@@ -33,7 +35,7 @@ namespace engine
 		}
 		
 		double abs() {
-			return sqrt(norm());
+			return std::sqrt(norm());
 		}
 		
 		vec3 normalize() {
@@ -41,7 +43,7 @@ namespace engine
 		}
 		
 		double dot(vec3 a) const {
-			return *this * a;
+			return x * a.x + y * a.y + z * a.z;
 		}
 		
 		vec3 cross(vec3 a) const {

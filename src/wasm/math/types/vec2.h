@@ -1,8 +1,10 @@
+#import "../types.h"
+
 namespace engine
 {
 	struct vec2 {
 		double x, y;
-		vec2(x, y) : x(x), y(y);
+		vec2(double x, double y) : x(x), y(y) {}
 		
 		vec2 operator+(vec2 a) const {
 			return vec2(x + a.x, y + a.y);
@@ -33,7 +35,7 @@ namespace engine
 		}
 		
 		double abs() {
-			return sqrt(norm());
+			return std::sqrt(norm());
 		}
 		
 		vec2 normalize() {
@@ -41,7 +43,7 @@ namespace engine
 		}
 		
 		double dot(vec2 a) const {
-			return *this * a;
+			return x * a.x + y * a.y;
 		}
 		
 		double cross(vec2 a) const {
