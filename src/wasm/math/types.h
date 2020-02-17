@@ -3,18 +3,14 @@
 
 #include <cmath>
 
-struct vec2;
-struct vec3;
-
-struct vec2 {
-	double x, y;
-};
-struct vec3 {
-	double x, y, z;
-};
+// struct declarations for other struct constructors
+struct vec2 { double x, y; };
+struct vec3 { double x, y, z; };
+struct vec4 { double x, y, z, w; };
 
 #include "types/vec2.h"
 #include "types/vec3.h"
+#include "types/vec4.h"
 #include "types/plane.h"
 
 #endif

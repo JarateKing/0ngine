@@ -11,6 +11,7 @@ namespace engine
 		vec2() : x(0), y(0) {}
 		vec2(double v) : x(v), y(v) {}
 		vec2(vec3 const& v) : x(v.x), y(v.y) {}
+		vec2(vec4 const& v) : x(v.x), y(v.y) {}
 		vec2(double x, double y) : x(x), y(y) {}
 		
 		vec2 operator+(vec2 a) const {
