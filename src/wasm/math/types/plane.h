@@ -20,6 +20,8 @@ namespace engine
 				return c;
 			case 3:
 				return d;
+			default:
+				return a;
 			}
 		}
 	};
