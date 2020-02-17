@@ -1,9 +1,16 @@
-#import "../types.h"
+#ifndef MATH_TYPES_VEC3_H
+#define MATH_TYPES_VEC3_H
+
+#include "../types.h"
 
 namespace engine
 {
 	struct vec3 {
 		double x, y, z;
+		
+		vec3() : x(0), y(0), z(0) {}
+		vec3(double v) : x(v), y(v), z(v) {}
+		vec3(vec2 const& v) : x(v.x), y(v.y), z(0) {}
 		vec3(double x, double y, double z) : x(x), y(y), z(z) {}
 		
 		vec3 operator+(vec3 a) const {
@@ -51,3 +58,5 @@ namespace engine
 		}
 	};
 }
+
+#endif
