@@ -11,6 +11,7 @@ mkdir build\resource
 
 :: copy resources to build folder
 xcopy /E src\css\*.css build
+xcopy /E src\javascript\*.js build
 xcopy /E resource build\resource
 
 :: find all cpp files
