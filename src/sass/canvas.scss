@@ -1,11 +1,15 @@
+$bg-color: #0B1118;
+
+// let the canvas be full-screen
 body {
 	margin: 0;
-	background-color: black;
+	background-color: $bg-color;
 }
 
+// set canvas to be full-screen
 canvas {
 	border: 0px none;
-	background-color: black;
+	background-color: $bg-color;
 	display: none;
 	width: 100vw;
 	height: 100vh;
