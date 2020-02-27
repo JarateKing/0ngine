@@ -16,6 +16,9 @@ xcopy /E src\css\*.css build\css
 xcopy /E src\javascript\*.js build\javascript
 xcopy /E resource build\resource
 
+:: compile typescript
+call tsc --outDir build\javascript\ src\typescript\setup.ts
+
 :: find all cpp files
 @set cppFilelist=
 for /r src\wasm\ %%i in (*.cpp) do set cppFilelist=!cppFilelist! %%i
