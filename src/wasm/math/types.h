@@ -13,5 +13,8 @@ struct vec4 { double x, y, z, w; };
 #include "types/vec3.h"
 #include "types/vec4.h"
 #include "types/plane.h"
+#include "types/mat2.h"
+#include "types/mat3.h"
+#include "types/mat4.h"
 
 #endif
