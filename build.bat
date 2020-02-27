@@ -8,10 +8,12 @@ setlocal ENABLEDELAYEDEXPANSION
 rmdir /s /q build
 mkdir build
 mkdir build\resource
+mkdir build\css
+mkdir build\javascript
 
 :: copy resources to build folder
-xcopy /E src\css\*.css build
-xcopy /E src\javascript\*.js build
+xcopy /E src\css\*.css build\css
+xcopy /E src\javascript\*.js build\javascript
 xcopy /E resource build\resource
 
 :: find all cpp files
