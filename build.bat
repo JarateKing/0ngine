@@ -16,6 +16,9 @@ xcopy /E src\css\*.css build\css
 xcopy /E src\javascript\*.js build\javascript
 xcopy /E resource build\resource
 
+:: compile sass
+call sass src/sass/canvas.scss build/css/canvas.css
+
 :: find all ts files
 @set tsFilelist=
 for /r src\typescript\ %%i in (*.ts) do set tsFilelist=!tsFilelist! %%i
@@ -27,5 +30,5 @@ call tsc --outDir build\javascript\ %tsFilelist%
 @set cppFilelist=
 for /r src\wasm\ %%i in (*.cpp) do set cppFilelist=!cppFilelist! %%i
 
-:: compile cpp to wasm
-em++ -O2 %cppFilelist% --js-library src/javascript/library.js --shell-file src/html/template.html -o build/main.html -s WASM=1
+:: compile c++ to wasm
+call em++ -O2 %cppFilelist% --js-library src/javascript/library.js --shell-file src/html/template.html -o build/main.html -s WASM=1
