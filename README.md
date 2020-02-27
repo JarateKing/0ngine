@@ -12,5 +12,6 @@ Build Dependencies:
 * [Python 3](https://www.python.org/)
 * [Emscripten](https://emscripten.org/docs/getting_started/downloads.html)
 * [Typescript](https://www.typescriptlang.org/)
+* [Sass](https://sass-lang.com/install)
 
 <p align="center"><img src="docs/images/logo/0ngine.png"></p>
