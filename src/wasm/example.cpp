@@ -1,6 +1,9 @@
 #include "example.h"
 #include "javascript.h"
 #include "console/log.h"
+#include "math/basic.h"
+#include "math/types.h"
+#include "math/rng.h"
 #include <emscripten.h>
 
 int main() {
@@ -17,5 +20,5 @@ int main() {
 
 void gameloop() {
 	js::clearDisplay();
-	js::displayCopywrite();
+	js::displayString("Made with 0ngine", "12px Arial", "grey", 5, 17);
 }

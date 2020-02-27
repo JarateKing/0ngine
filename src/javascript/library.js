@@ -33,16 +33,19 @@ mergeInto(LibraryManager.library, {
 			window.location.href = urlStr;
 	},
 	
-	displayCopywrite: function() {
+	displayString: function(text, font, color, xpos, ypos) {
+		let textStr = UTF8ToString(text);
+		let fontStr = UTF8ToString(font);
+		let colorStr = UTF8ToString(color);
 		let canvas = document.getElementById("canvas");
 		let context = canvas.getContext("2d");
 		
 		canvas.width = canvas.offsetWidth;
 		canvas.height = canvas.offsetHeight;
 		
-		context.fillStyle = 'grey';
-		context.font = "12px Arial";
-		context.fillText("Made with 0ngine", 5, 17);
+		context.fillStyle = colorStr;
+		context.font = fontStr;
+		context.fillText(textStr, xpos, ypos);
 	},
 	
 	clearDisplay: function() {
