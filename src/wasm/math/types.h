@@ -8,6 +8,10 @@ struct vec2 { double x, y; };
 struct vec3 { double x, y, z; };
 struct vec4 { double x, y, z, w; };
 
+struct mat2 { double v[2][2]; };
+struct mat3 { double v[3][3]; };
+struct mat4 { double v[4][4]; };
+
 #include "types/color.h"
 #include "types/vec2.h"
 #include "types/vec3.h"
@@ -16,5 +20,6 @@ struct vec4 { double x, y, z, w; };
 #include "types/mat2.h"
 #include "types/mat3.h"
 #include "types/mat4.h"
+#include "types/quaternion.h"
 
 #endif
