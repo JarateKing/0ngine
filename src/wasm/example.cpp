@@ -20,5 +20,5 @@ int main() {
 
 void gameloop() {
 	js::clearDisplay();
-	js::displayString("Made with 0ngine", "12px Arial", "grey", 5, 17);
+	js::displayString("Made with 0ngine", "Arial", 12, "grey", 5, 5);
 }

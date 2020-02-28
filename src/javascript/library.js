@@ -33,7 +33,7 @@ mergeInto(LibraryManager.library, {
 			window.location.href = urlStr;
 	},
 	
-	displayString: function(text, font, color, xpos, ypos) {
+	displayString: function(text, font, fontSize, color, xpos, ypos) {
 		let textStr = UTF8ToString(text);
 		let fontStr = UTF8ToString(font);
 		let colorStr = UTF8ToString(color);
@@ -44,8 +44,8 @@ mergeInto(LibraryManager.library, {
 		canvas.height = canvas.offsetHeight;
 		
 		context.fillStyle = colorStr;
-		context.font = fontStr;
-		context.fillText(textStr, xpos, ypos);
+		context.font = fontSize + "px " + fontStr;
+		context.fillText(textStr, xpos, fontSize + ypos);
 	},
 	
 	clearDisplay: function() {
