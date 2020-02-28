@@ -16,6 +16,9 @@ xcopy /E src\css\*.css build\css
 xcopy /E src\javascript\*.js build\javascript
 xcopy /E resource build\resource
 
+:: copy the default favicon
+copy /y resource\icons\0ngine.ico build\favicon.ico
+
 :: compile sass
 call sass src/sass/canvas.scss build/css/canvas.css
 
