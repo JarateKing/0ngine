@@ -64,6 +64,8 @@ let Module = {
         Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
         if (!left) {
             canvasElement.style.display = 'block';
+			canvasElement.style.width = '100vw';
+			canvasElement.style.height = '100vh';
         }
     }
 };
