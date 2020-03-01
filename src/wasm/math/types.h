@@ -3,6 +3,11 @@
 
 #include <cmath>
 
+// constants
+const double PI = 3.141592653589793238;
+const double DEG2RAD = (PI / 180.0f);
+const double RAD2DEG = (180.0f / PI);
+
 // struct declarations for other struct constructors
 struct vec2 { double x, y; };
 struct vec3 { double x, y, z; };
