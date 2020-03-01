@@ -34,4 +34,4 @@ call tsc --outDir build\javascript\ %tsFilelist%
 for /r src\wasm\ %%i in (*.cpp) do set cppFilelist=!cppFilelist! %%i
 
 :: compile c++ to wasm
-call em++ -O2 %cppFilelist% --pre-js src/javascript/pre-library.js --js-library src/javascript/library.js --shell-file src/html/template.html -o build/main.html -s WASM=1
+call em++ -O2 %cppFilelist% --pre-js src/javascript/pre-library.js --js-library src/javascript/library.js --post-js src/javascript/post-library.js --shell-file src/html/template.html -o build/main.html -s WASM=1
