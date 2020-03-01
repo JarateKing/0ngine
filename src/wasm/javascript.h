@@ -6,8 +6,8 @@ namespace js {
 		extern void openUrl(const char* url, bool isNewTab);
 		extern void displayString(const char* text, const char* font, int fontSize, const char* color, int xpos, int ypos);
 		extern void clearDisplay();
-		extern float getScreenX();
-		extern float getScreenY();
+		extern int getScreenX();
+		extern int getScreenY();
 		extern float getAspectRatio();
 	}
 }
