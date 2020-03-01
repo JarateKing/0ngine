@@ -34,5 +34,9 @@ namespace engine
 			v[3][2] = dc;
 			v[3][3] = dd;
 		}
+		
+		double* operator[](int index) {
+			return v[index];
+		}
 	};
 }

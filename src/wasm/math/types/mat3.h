@@ -27,5 +27,9 @@ namespace engine
 			v[2][1] = cb;
 			v[2][2] = cc;
 		}
+		
+		double* operator[](int index) {
+			return v[index];
+		}
 	};
 }
