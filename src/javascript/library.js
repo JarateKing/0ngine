@@ -38,9 +38,6 @@ mergeInto(LibraryManager.library, {
 		let fontStr = UTF8ToString(font);
 		let colorStr = UTF8ToString(color);
 		
-		canvas.width = canvas.offsetWidth;
-		canvas.height = canvas.offsetHeight;
-		
 		context.fillStyle = colorStr;
 		context.font = fontSize + "px " + fontStr;
 		context.fillText(textStr, xpos, fontSize + ypos);
@@ -48,5 +45,20 @@ mergeInto(LibraryManager.library, {
 	
 	clearDisplay: function() {
 		context.clearRect(0, 0, canvas.width, canvas.height);
+		
+		canvas.width = canvas.offsetWidth;
+		canvas.height = canvas.offsetHeight;
+	},
+	
+	getScreenX: function() {
+		return canvas.width;
+	},
+	
+	getScreenY: function() {
+		return canvas.height;
+	},
+	
+	getAspectRatio: function() {
+		return (canvas.width / canvas.height);
 	}
 });

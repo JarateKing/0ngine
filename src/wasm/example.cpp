@@ -20,5 +20,7 @@ int main() {
 
 void gameloop() {
 	js::clearDisplay();
-	js::displayString("Made with 0ngine", "Arial", 12, "grey", 5, 5);
+	js::displayString(std::to_string(js::getScreenX()).c_str(), "Arial", 12, "grey", 5, 5);
+	js::displayString(std::to_string(js::getScreenY()).c_str(), "Arial", 12, "grey", 5, 17);
+	js::displayString(std::to_string(js::getAspectRatio()).c_str(), "Arial", 12, "grey", 5, 29);
 }
