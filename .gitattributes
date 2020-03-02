@@ -12,3 +12,4 @@ lib/* linguist-vendored
 *.fsh linguist-language=GLSL
 *.js linguist-language=JavaScript
 *.ts linguist-language=TypeScript
+*.py linguist-language=Python
