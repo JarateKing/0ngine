@@ -4,7 +4,10 @@
 #include "math/basic.h"
 #include "math/types.h"
 #include "math/rng.h"
+#include "fps/fps_counter.h"
 #include <emscripten.h>
+
+static engine::FPS* fps = new engine::FPS();
 
 int main() {
 	std::string title = "0ngine";
@@ -19,8 +22,15 @@ int main() {
 }
 
 void gameloop() {
+	// fps portion
+	fps->Update();
+	
+	// graphical portion
 	js::clearDisplay();
 	js::displayString(std::to_string(js::getScreenX()).c_str(), "Arial", 12, "grey", 5, 5);
 	js::displayString(std::to_string(js::getScreenY()).c_str(), "Arial", 12, "grey", 5, 17);
 	js::displayString(std::to_string(js::getAspectRatio()).c_str(), "Arial", 12, "grey", 5, 29);
+	
+	js::displayString(std::to_string(fps->GetDelta()).c_str(), "Arial", 12, "grey", 5, 50);
+	js::displayString(std::to_string(fps->GetFramerate()).c_str(), "Arial", 12, "grey", 5, 62);
 }
