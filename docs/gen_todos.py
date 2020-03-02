@@ -16,7 +16,8 @@ for (dirpath, dirnames, filenames) in walk('..\\src\\'):
 			search = line.find('@TODO')
 			if (search != -1):
 				linePrefix = line[:search]
-				todosInFile += '\nLine ' + str(lineNumber) + '\n'
+				todosInFile += '\n[Line ' + str(lineNumber) + ']('
+				todosInFile += 'https://github.com/JarateKing/0ngine/blob/master/src/' + dirpath[7:].replace('\\','/') + '/' + filename + '#L' + str(lineNumber) + ')\n'
 				todosInFile += '```\n'
 				while (line != '' and line.startswith(linePrefix)):
 					todosInFile += line[search:]
