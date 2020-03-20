@@ -33,5 +33,13 @@ call tsc --outDir build\javascript\ %tsFilelist%
 @set cppFilelist=
 for /r src\wasm\ %%i in (*.cpp) do set cppFilelist=!cppFilelist! %%i
 
+:: setup compiler flags
+@set warnings=-Wno-c++11-extensions
+@set prelib=src/javascript/pre-library.js
+@set jslib=src/javascript/library.js
+@set postlib=src/javascript/post-library.js
+@set template=src/html/template.html
+@set output=build/main.html
+
 :: compile c++ to wasm
-call em++ -O2 %cppFilelist% --pre-js src/javascript/pre-library.js --js-library src/javascript/library.js --post-js src/javascript/post-library.js --shell-file src/html/template.html -o build/main.html -s WASM=1
+call em++ -O2 %cppFilelist% %warnings% --pre-js %prelib% --js-library %jslib% --post-js %postlib% --shell-file %template% -o %output% -s WASM=1
