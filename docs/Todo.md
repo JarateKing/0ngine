@@ -63,3 +63,21 @@
 ```
 
 
+## wasm\math\types\quaternion.h
+
+[Line 53](https://github.com/JarateKing/0ngine/blob/master/src/wasm/math/types/quaternion.h#L53)
+```
+@TODO:
+- lookat functionality
+- lerp and slerp
+- euler conversion
+- matrix conversion
+- from angle and axis
+- normalize
+- inverse
+- dot
+- cross
+- rotate vector by quaternion
+```
+
+

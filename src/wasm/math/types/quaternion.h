@@ -49,5 +49,17 @@ namespace engine
 		bool operator!=(quaternion a) const {
 			return !(x == a.x && y == a.y && z == a.z && w == a.w);
 		}
+		
+		// @TODO:
+		// - lookat functionality
+		// - lerp and slerp
+		// - euler conversion
+		// - matrix conversion
+		// - from angle and axis
+		// - normalize
+		// - inverse
+		// - dot
+		// - cross
+		// - rotate vector by quaternion
 	};
 }
