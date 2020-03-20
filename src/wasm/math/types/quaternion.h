@@ -6,6 +6,13 @@ namespace engine
 		quaternion() : x(0), y(0), z(0), w(1) {}
 		quaternion(double x, double y, double z, double w) : x(x), y(y), z(z), w(w) {}
 		
+		double lengthsq() const {
+			return x*x + y*y + z*z + w*w;
+		}
+		double length() const {
+			return sqrt(lengthsq());
+		}
+		
 		quaternion operator+(quaternion a) const {
 			return quaternion(x + a.x, y + a.y, z + a.z, w + a.w);
 		}
@@ -24,6 +31,17 @@ namespace engine
 			double C = (x * a.y) - (y * a.x);
 			double D = ((x * a.x) + (y * a.y)) + (z * a.z);
 			return quaternion(x * a.x + a.x * w + A, y * a.w + w * a.y + B, z * a.w + w * a.z + C, w * a.w - D);
+		}
+		quaternion operator/(double scale) const {
+			return quaternion(x / scale, y / scale, z / scale, w / scale);
+		}
+		quaternion operator/(quaternion a) const {
+			double normSq = a.lengthsq();
+			double A = -w * a.x + x * a.w - y * a.z + z * a.y;
+			double B = -w * a.y + x * a.z + y * a.w - z * a.x;
+			double C = -w * a.z - x * a.y + y * a.x + z * a.w;
+			double D = w * a.w + x * a.x + y * a.y + z * a.z;
+			return quaternion(A / normSq, B / normSq, C / normSq, D / normSq);
 		}
 		bool operator==(quaternion a) const {
 			return x == a.x && y == a.y && z == a.z && w == a.w;
