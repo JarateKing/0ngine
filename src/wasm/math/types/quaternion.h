@@ -6,10 +6,10 @@ namespace engine
 		quaternion() : x(0), y(0), z(0), w(1) {}
 		quaternion(double x, double y, double z, double w) : x(x), y(y), z(z), w(w) {}
 		
-		double dot(quaternion a) {
+		double dot(quaternion a) const {
 			return x * a.x + y * a.y + x * a.z + w * a.w;
 		}
-		quaternion cross(quaternion a) {
+		quaternion cross(quaternion a) const {
 			// @TODO verify that this is correct
 			// - this is the `*` operator code, assuming that cross is the same
 			double A = (y * a.z) - (z * a.y);
@@ -34,14 +34,11 @@ namespace engine
 			double factor = 1.0 / len;
 			return quaternion(x * factor, y * factor, z * factor, w * factor);
 		}
-		quaternion inverse() {
+		quaternion inverse() const {
 			return conj() / lengthsq();
 		}
-		quaternion relative(quaternion a) {
+		quaternion relative(quaternion a) const {
 			return cross(a.inverse());
-		}
-		double relativeAngle(quaternion a) {
-			return acos(relative(a));
 		}
 		
 		quaternion operator+(quaternion a) const {
