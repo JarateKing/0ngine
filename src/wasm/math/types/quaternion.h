@@ -37,6 +37,12 @@ namespace engine
 		quaternion inverse() {
 			return conj() / lengthsq();
 		}
+		quaternion relative(quaternion a) {
+			return cross(a.inverse());
+		}
+		double relativeAngle(quaternion a) {
+			return acos(relative(a));
+		}
 		
 		quaternion operator+(quaternion a) const {
 			return quaternion(x + a.x, y + a.y, z + a.z, w + a.w);
