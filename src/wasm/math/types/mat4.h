@@ -38,5 +38,10 @@ namespace engine
 		double* operator[](int index) {
 			return v[index];
 		}
+		
+		// @TODO:
+		// - vector conversions (rotation, scale, translation)
+		// - vector math
+		// - lookat
 	};
 }

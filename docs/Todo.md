@@ -63,9 +63,43 @@
 ```
 
 
+## wasm\math\projmatrix.h
+
+[Line 33](https://github.com/JarateKing/0ngine/blob/master/src/wasm/math/projmatrix.h#L33)
+```
+@TODO: infinite perspective matrices
+```
+
+
+## wasm\math\types\color.h
+
+[Line 72](https://github.com/JarateKing/0ngine/blob/master/src/wasm/math/types/color.h#L72)
+```
+@TODO:
+- convert between formats
+```
+
+
+## wasm\math\types\mat4.h
+
+[Line 42](https://github.com/JarateKing/0ngine/blob/master/src/wasm/math/types/mat4.h#L42)
+```
+@TODO:
+- vector conversions (rotation, scale, translation)
+- vector math
+- lookat
+```
+
+
 ## wasm\math\types\quaternion.h
 
-[Line 53](https://github.com/JarateKing/0ngine/blob/master/src/wasm/math/types/quaternion.h#L53)
+[Line 13](https://github.com/JarateKing/0ngine/blob/master/src/wasm/math/types/quaternion.h#L13)
+```
+@TODO verify that this is correct
+- this is the `*` operator code, assuming that cross is the same
+```
+
+[Line 80](https://github.com/JarateKing/0ngine/blob/master/src/wasm/math/types/quaternion.h#L80)
 ```
 @TODO:
 - lookat functionality
@@ -73,10 +107,6 @@
 - euler conversion
 - matrix conversion
 - from angle and axis
-- normalize
-- inverse
-- dot
-- cross
 - rotate vector by quaternion
 ```
 

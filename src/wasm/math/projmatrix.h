@@ -29,5 +29,7 @@ namespace engine
 		
 		// get view-frustum planes
 		static Plane* GetFrustum(mat4 matrix);
+		
+		// @TODO: infinite perspective matrices
 	};
 }
