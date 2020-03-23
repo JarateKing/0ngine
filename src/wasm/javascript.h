@@ -9,5 +9,9 @@ namespace js {
 		extern int getScreenX();
 		extern int getScreenY();
 		extern float getAspectRatio();
+		extern void localdataSave(const char* id, const char* text);
+		extern void localdataRemove(const char* id);
+		extern void localdataClear();
+		extern char* localdataGet(const char* id);
 	}
 }

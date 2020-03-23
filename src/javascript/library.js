@@ -60,5 +60,29 @@ mergeInto(LibraryManager.library, {
 	
 	getAspectRatio: function() {
 		return (canvas.width / canvas.height);
+	},
+	
+	localdataSave: function(id, text) {
+		let idStr = UTF8ToString(id);
+		let textStr = UTF8ToString(text);
+		window.localStorage.setItem(idStr, textStr);
+	},
+	
+	localdataRemove: function(id) {
+		let idStr = UTF8ToString(id);
+		window.localStorage.removeItem(idStr);
+	},
+	
+	localdataClear: function() {
+		window.localStorage.clear();
+	},
+	
+	localdataGet: function(id) {
+		let idStr = UTF8ToString(id);
+		let str = window.localStorage.getItem(idStr);
+		let len = (str.length << 2) + 1
+		var buffer = stackAlloc(len);
+		stringToUTF8(str, buffer, len);
+		return buffer;
 	}
 });
