@@ -2,6 +2,7 @@
 #define JAVASCRIPT_LIBRARY_FUNCTIONS
 
 #include <string>
+#include "math/types.h"
 
 namespace js {
 	extern "C" {
@@ -35,6 +36,10 @@ namespace js {
 	void displayString(std::string text, const char* font, int fontSize, std::string color, int xpos, int ypos);
 	void displayString(const char* text, std::string font, int fontSize, std::string color, int xpos, int ypos);
 	void displayString(std::string text, std::string font, int fontSize, std::string color, int xpos, int ypos);
+	void displayString(std::string text, const char* font, int fontSize, engine::color color, int xpos, int ypos);
+	void displayString(const char* text, std::string font, int fontSize, engine::color color, int xpos, int ypos);
+	void displayString(std::string text, std::string font, int fontSize, engine::color color, int xpos, int ypos);
+	void displayString(const char* text, const char* font, int fontSize, engine::color color, int xpos, int ypos);
 	void localdataSave(std::string id, const char* text);
 	void localdataSave(const char* id, std::string text);
 	void localdataSave(std::string id, std::string text);
