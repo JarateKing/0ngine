@@ -22,6 +22,12 @@ namespace js {
 	}
 	
 	// wrappers
+	void changeIcon(std::string iconSrc);
+	void changeUrl(std::string state, const char* urlSuffix);
+	void changeUrl(const char* state, std::string urlSuffix);
+	void changeUrl(std::string state, std::string urlSuffix);
+	void changeTitle(std::string title);
+	void openUrl(std::string url, bool isNewTab);
 	void displayString(std::string text, const char* font, int fontSize, const char* color, int xpos, int ypos);
 	void displayString(const char* text, std::string font, int fontSize, const char* color, int xpos, int ypos);
 	void displayString(std::string text, std::string font, int fontSize, const char* color, int xpos, int ypos);
@@ -29,6 +35,11 @@ namespace js {
 	void displayString(std::string text, const char* font, int fontSize, std::string color, int xpos, int ypos);
 	void displayString(const char* text, std::string font, int fontSize, std::string color, int xpos, int ypos);
 	void displayString(std::string text, std::string font, int fontSize, std::string color, int xpos, int ypos);
+	void localdataSave(std::string id, const char* text);
+	void localdataSave(const char* id, std::string text);
+	void localdataSave(std::string id, std::string text);
+	void localdataRemove(std::string id);
+	char* localdataGet(std::string id);
 }
 
 #endif
