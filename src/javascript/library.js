@@ -80,9 +80,16 @@ mergeInto(LibraryManager.library, {
 	localdataGet: function(id) {
 		let idStr = UTF8ToString(id);
 		let str = window.localStorage.getItem(idStr);
-		let len = (str.length << 2) + 1
+		let len = (str.length << 2) + 1;
 		var buffer = stackAlloc(len);
 		stringToUTF8(str, buffer, len);
+		return buffer;
+	},
+	
+	getKeysPressed: function() {
+		let len = (keysHeld.length << 2) + 1;
+		var buffer = stackAlloc(len);
+		stringToUTF8(keysHeld, buffer, len);
 		return buffer;
 	}
 });

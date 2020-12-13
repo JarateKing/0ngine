@@ -34,4 +34,6 @@ void gameloop() {
 	
 	js::displayString(std::to_string(fps->GetDelta()).c_str(), "Arial", 12, fontColor.toHex().c_str(), 5, 50);
 	js::displayString(std::to_string(fps->GetFramerate()).c_str(), "Arial", 12, fontColor.toHex().c_str(), 5, 62);
+	
+	js::displayString(js::getKeysPressed(), "Arial", 12, fontColor.toHex().c_str(), 5, 80);
 }

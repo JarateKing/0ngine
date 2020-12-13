@@ -13,5 +13,6 @@ namespace js {
 		extern void localdataRemove(const char* id);
 		extern void localdataClear();
 		extern char* localdataGet(const char* id);
+		extern char* getKeysPressed();
 	}
 }
