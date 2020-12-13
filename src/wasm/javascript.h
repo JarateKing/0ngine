@@ -22,8 +22,12 @@ namespace js {
 	}
 	
 	// wrappers
+	void displayString(std::string text, const char* font, int fontSize, const char* color, int xpos, int ypos);
+	void displayString(const char* text, std::string font, int fontSize, const char* color, int xpos, int ypos);
+	void displayString(std::string text, std::string font, int fontSize, const char* color, int xpos, int ypos);
 	void displayString(const char* text, const char* font, int fontSize, std::string color, int xpos, int ypos);
 	void displayString(std::string text, const char* font, int fontSize, std::string color, int xpos, int ypos);
+	void displayString(const char* text, std::string font, int fontSize, std::string color, int xpos, int ypos);
 	void displayString(std::string text, std::string font, int fontSize, std::string color, int xpos, int ypos);
 }
 
