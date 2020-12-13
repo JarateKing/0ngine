@@ -1,3 +1,8 @@
+#ifndef JAVASCRIPT_LIBRARY_FUNCTIONS
+#define JAVASCRIPT_LIBRARY_FUNCTIONS
+
+#include <string>
+
 namespace js {
 	extern "C" {
 		extern void changeIcon(const char* iconSrc);
@@ -15,4 +20,11 @@ namespace js {
 		extern char* localdataGet(const char* id);
 		extern char* getKeysPressed();
 	}
+	
+	// wrappers
+	void displayString(const char* text, const char* font, int fontSize, std::string color, int xpos, int ypos);
+	void displayString(std::string text, const char* font, int fontSize, std::string color, int xpos, int ypos);
+	void displayString(std::string text, std::string font, int fontSize, std::string color, int xpos, int ypos);
 }
+
+#endif
