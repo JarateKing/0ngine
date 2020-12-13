@@ -78,3 +78,21 @@ window.onerror = function() {
         if (text) Module.printErr('[post-exception status] ' + text);
     };
 };
+
+let keysHeld = '';
+
+window.addEventListener("keydown",
+    function(e){
+		if (keysHeld.indexOf(e.key.toLowerCase() + ',') < 0) {
+			keysHeld = keysHeld.concat(e.key.toLowerCase() + ',');
+		}
+		console.log(keysHeld);
+    },
+false);
+
+window.addEventListener('keyup',
+    function(e){
+		keysHeld = keysHeld.replace(e.key.toLowerCase() + ',', '');
+		console.log(keysHeld);
+    },
+false);
