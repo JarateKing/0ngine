@@ -35,11 +35,11 @@ namespace engine
 		color(float r, float g, float b, float a) : r(r), g(g), b(b), a(a) {}
 		
 		colorRGBint toRGBint() {
-			return {r * 255 + ROUNDUP_EPSILON, g * 255 + ROUNDUP_EPSILON, b * 255 + ROUNDUP_EPSILON};
+			return {static_cast<int>(r * 255 + ROUNDUP_EPSILON), static_cast<int>(g * 255 + ROUNDUP_EPSILON), static_cast<int>(b * 255 + ROUNDUP_EPSILON)};
 		}
 		
 		colorRGBAint toRGBAint() {
-			return {r * 255 + ROUNDUP_EPSILON, g * 255 + ROUNDUP_EPSILON, b * 255 + ROUNDUP_EPSILON, a * 255 + ROUNDUP_EPSILON};
+			return {static_cast<int>(r * 255 + ROUNDUP_EPSILON), static_cast<int>(g * 255 + ROUNDUP_EPSILON), static_cast<int>(b * 255 + ROUNDUP_EPSILON), static_cast<int>(a * 255 + ROUNDUP_EPSILON)};
 		}
 		
 		unsigned int toARGB(bool includeAlpha = true) {
