@@ -11,7 +11,7 @@ COPY resource /resource/
 RUN mkdir /build /build/css /build/javascript /build/resource
 RUN cp /src/css/*.css /build/css
 RUN cp /src/javascript/*.js /build/javascript
-RUN cp -r /resource /build/resource
+RUN cp -r /resource /build/
 
 # build sass
 RUN sass /src/sass/canvas.scss /build/css/canvas.css
