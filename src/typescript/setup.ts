@@ -116,3 +116,16 @@ function setMouseKeysHeld(e: MouseEvent) {
 
 window.addEventListener('mouseup', setMouseKeysHeld, false);
 window.addEventListener('mousedown', setMouseKeysHeld, false);
+
+// mouse scroll
+let mouseScrollX = 0;
+let mouseScrollY = 0;
+let mouseScrollZ = 0;
+
+window.addEventListener('wheel',
+	function(e: WheelEvent){
+		mouseScrollX = e.deltaX;
+		mouseScrollY = e.deltaY;
+		mouseScrollZ = e.deltaZ;
+    },
+false);

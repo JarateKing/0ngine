@@ -9,6 +9,7 @@
 
 static engine::FPS* fps = new engine::FPS();
 static engine::color fontColor(0.8, 0.85, 1.0, 1.0);
+static double scrollSum = 0.0;
 
 int main() {
 	js::changeTitle("0ngine");
@@ -22,6 +23,8 @@ void gameloop() {
 	// fps portion
 	fps->Update();
 	
+	scrollSum += js::getMouseScrollY();
+	
 	// graphical portion
 	js::clearDisplay();
 	js::displayString(std::to_string(js::getScreenX()), "Arial", 12, fontColor, 5, 5);
@@ -34,4 +37,7 @@ void gameloop() {
 	js::displayString(js::getKeysPressed(), "Arial", 12, fontColor, 5, 80);
 	js::displayString(std::to_string(js::getMouseX()) + ", " + std::to_string(js::getMouseY()), "Arial", 12, fontColor, 5, 92);
 	js::displayString(std::to_string(js::getMouseKeysPressed()), "Arial", 12, fontColor, 5, 104);
+	js::displayString(std::to_string(js::getMouseScrollX()) + ", " + std::to_string(js::getMouseScrollY()) + ", " + std::to_string(js::getMouseScrollZ()) + " = " + std::to_string(scrollSum), "Arial", 12, fontColor, 5, 116);
+	
+	js::resetMouseScroll();
 }

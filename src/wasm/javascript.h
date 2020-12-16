@@ -23,6 +23,10 @@ namespace js {
 		extern int getMouseX();
 		extern int getMouseY();
 		extern int getMouseKeysPressed();
+		extern float getMouseScrollX();
+		extern float getMouseScrollY();
+		extern float getMouseScrollZ();
+		extern void resetMouseScroll();
 	}
 	
 	// wrappers

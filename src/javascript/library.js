@@ -103,5 +103,23 @@ mergeInto(LibraryManager.library, {
 	
 	getMouseKeysPressed: function() {
 		return mouseKeysHeld;
+	},
+	
+	getMouseScrollX: function() {
+		return mouseScrollX;
+	},
+	
+	getMouseScrollY: function() {
+		return mouseScrollY;
+	},
+	
+	getMouseScrollZ: function() {
+		return mouseScrollZ;
+	},
+	
+	resetMouseScroll: function() {
+		mouseScrollX = 0;
+		mouseScrollY = 0;
+		mouseScrollZ = 0;
 	}
 });
