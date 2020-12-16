@@ -91,5 +91,13 @@ mergeInto(LibraryManager.library, {
 		var buffer = stackAlloc(len);
 		stringToUTF8(keysHeld, buffer, len);
 		return buffer;
+	},
+	
+	getMouseX: function() {
+		return mousePosX;
+	},
+	
+	getMouseY: function() {
+		return mousePosY;
 	}
 });

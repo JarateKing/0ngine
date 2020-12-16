@@ -79,10 +79,11 @@ window.onerror = function() {
     };
 };
 
+// keyboard input
 let keysHeld = '';
 
-window.addEventListener("keydown",
-    function(e){
+window.addEventListener('keydown',
+    function(e: KeyboardEvent){
 		if (keysHeld.indexOf(e.key.toLowerCase() + ',') < 0) {
 			keysHeld = keysHeld.concat(e.key.toLowerCase() + ',');
 		}
@@ -90,7 +91,18 @@ window.addEventListener("keydown",
 false);
 
 window.addEventListener('keyup',
-    function(e){
+    function(e: KeyboardEvent){
 		keysHeld = keysHeld.replace(e.key.toLowerCase() + ',', '');
+    },
+false);
+
+// mouse position
+let mousePosX = 0;
+let mousePosY = 0;
+
+window.addEventListener('mousemove',
+	function(e: MouseEvent){
+		mousePosX = e.clientX;
+		mousePosY = e.clientY;
     },
 false);

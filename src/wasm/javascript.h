@@ -20,6 +20,8 @@ namespace js {
 		extern void localdataClear();
 		extern char* localdataGet(const char* id);
 		extern char* getKeysPressed();
+		extern int getMouseX();
+		extern int getMouseY();
 	}
 	
 	// wrappers
