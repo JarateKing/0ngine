@@ -22,6 +22,7 @@ namespace js {
 		extern char* getKeysPressed();
 		extern int getMouseX();
 		extern int getMouseY();
+		extern int getMouseKeysPressed();
 	}
 	
 	// wrappers

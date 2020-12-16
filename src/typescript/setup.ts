@@ -106,3 +106,13 @@ window.addEventListener('mousemove',
 		mousePosY = e.clientY;
     },
 false);
+
+// mouse clicks
+let mouseKeysHeld = 0;
+
+function setMouseKeysHeld(e: MouseEvent) {
+	mouseKeysHeld = e.buttons;
+}
+
+window.addEventListener('mouseup', setMouseKeysHeld, false);
+window.addEventListener('mousedown', setMouseKeysHeld, false);

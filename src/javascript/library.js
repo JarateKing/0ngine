@@ -99,5 +99,9 @@ mergeInto(LibraryManager.library, {
 	
 	getMouseY: function() {
 		return mousePosY;
+	},
+	
+	getMouseKeysPressed: function() {
+		return mouseKeysHeld;
 	}
 });

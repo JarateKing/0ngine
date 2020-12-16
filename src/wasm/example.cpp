@@ -33,4 +33,5 @@ void gameloop() {
 	
 	js::displayString(js::getKeysPressed(), "Arial", 12, fontColor, 5, 80);
 	js::displayString(std::to_string(js::getMouseX()) + ", " + std::to_string(js::getMouseY()), "Arial", 12, fontColor, 5, 92);
+	js::displayString(std::to_string(js::getMouseKeysPressed()), "Arial", 12, fontColor, 5, 104);
 }
