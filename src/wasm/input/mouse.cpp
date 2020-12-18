@@ -1,6 +1,8 @@
 #include "mouse.h"
 #include "keys.h"
 
+#include "../math/basic.h"
+
 engine::Mouse::Mouse() {
 	pos = {0, 0};
 	buttons = 0;
@@ -9,6 +11,7 @@ engine::Mouse::Mouse() {
 void engine::Mouse::update(float delta) {
 	pos = {js::getMouseX(), js::getMouseY()};
 	buttons = js::getMouseKeysPressed();
+	verticalScroll = js::getMouseScrollY();
 }
 
 std::pair<int, int> engine::Mouse::position() {
@@ -33,4 +36,16 @@ bool engine::Mouse::isBackButton() {
 
 bool engine::Mouse::isForwardButton() {
 	return buttons & MOUSE_FORWARD;
+}
+
+bool engine::Mouse::isMwheeldown() {
+	return verticalScroll > 0;
+}
+
+bool engine::Mouse::isMwheelup() {
+	return verticalScroll < 0;
+}
+
+int engine::Mouse::scroll() {
+	return Math::sign(verticalScroll);
 }

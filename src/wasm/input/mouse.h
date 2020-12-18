@@ -13,9 +13,13 @@ namespace engine {
 		bool isMMB();
 		bool isBackButton();
 		bool isForwardButton();
+		bool isMwheeldown();
+		bool isMwheelup();
+		int scroll();
 		
 	private:
 		std::pair<int, int> pos;
 		int buttons;
+		float verticalScroll;
 	};
 }
