@@ -21,5 +21,8 @@ namespace engine
 		static float easeIn(float percent);
 		static float easeOut(float percent);
 		static float ease(float percent);
+		
+		static int sign(float val);
+		static int sign(double val);
 	};
 }
