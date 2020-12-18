@@ -41,7 +41,7 @@ void gameloop() {
 	
 	js::displayString(js::getKeysPressed(), "Arial", 12, fontColor, 5, 80);
 	js::displayString(std::to_string(mouse->position().first) + ", " + std::to_string(mouse->position().second), "Arial", 12, fontColor, 5, 92);
-	js::displayString(std::to_string(js::getMouseKeysPressed()), "Arial", 12, fontColor, 5, 104);
+	js::displayString(std::to_string(mouse->isLMB()) + ", " + std::to_string(mouse->isRMB()) + ", " + std::to_string(mouse->isMMB()) + ", " + std::to_string(mouse->isBackButton()) + ", " + std::to_string(mouse->isForwardButton()), "Arial", 12, fontColor, 5, 104);
 	js::displayString(std::to_string(js::getMouseScrollX()) + ", " + std::to_string(js::getMouseScrollY()) + ", " + std::to_string(js::getMouseScrollZ()) + " = " + std::to_string(scrollSum), "Arial", 12, fontColor, 5, 116);
 	
 	js::resetMouseScroll();
