@@ -1,4 +1,5 @@
 #include "strings.h"
+#include <algorithm>
 
 std::string utility::format(const std::string& line, const std::map<std::string, std::string>& dict) {
     std::string ans;
@@ -51,5 +52,10 @@ void utility::lowercase(std::string& s) {
 
 void utility::uppercase(std::string& s) {
 	std::transform(s.begin(), s.end(), s.begin(), ::toupper);
+}
+
+void utility::trim(std::string &s) {
+	s.erase(s.begin(),find_if_not(s.begin(),s.end(),[](int c){return isspace(c);}));
+	s.erase(find_if_not(s.rbegin(),s.rend(),[](int c){return isspace(c);}).base(),s.end());
 }
 
