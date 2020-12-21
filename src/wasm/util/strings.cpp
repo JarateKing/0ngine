@@ -45,3 +45,11 @@ std::string utility::format(const std::string& line, const std::map<std::string,
     return ans;
 }
 
+void utility::lowercase(std::string& s) {
+	std::transform(s.begin(), s.end(), s.begin(), ::tolower);
+}
+
+void utility::uppercase(std::string& s) {
+	std::transform(s.begin(), s.end(), s.begin(), ::toupper);
+}
+
