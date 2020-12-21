@@ -1,4 +1,5 @@
 #include "strings.h"
+#include <sstream>
 #include <algorithm>
 
 std::string utility::format(const std::string& line, const std::map<std::string, std::string>& dict) {
@@ -59,3 +60,9 @@ void utility::trim(std::string &s) {
 	s.erase(find_if_not(s.rbegin(),s.rend(),[](int c){return isspace(c);}).base(),s.end());
 }
 
+std::vector<std::string> utility::split(std::string& s, char token) {
+    std::vector<std::string> v; std::stringstream ss(s);
+    for (std::string e;getline(ss,e,token);)
+        v.push_back(e);
+    return v;
+}
